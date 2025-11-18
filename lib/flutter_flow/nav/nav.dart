@@ -108,6 +108,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: AgendaWidget.routeName,
           path: AgendaWidget.routePath,
           builder: (context, params) => AgendaWidget(),
+        ),
+        FFRoute(
+          name: ReservarCitaWidget.routeName,
+          path: ReservarCitaWidget.routePath,
+          builder: (context, params) => ReservarCitaWidget(),
+        ),
+        FFRoute(
+          name: CancelarCitaWidget.routeName,
+          path: CancelarCitaWidget.routePath,
+          builder: (context, params) => CancelarCitaWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
