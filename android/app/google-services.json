@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "452285580487",
+    "project_id": "barberiaelbarbero-dc",
+    "storage_bucket": "barberiaelbarbero-dc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:452285580487:android:dd59ee483274e1e7b26ae2",
+        "android_client_info": {
+          "package_name": "com.elBarbero.barberia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "452285580487-uo6tsrnv4umlnu79utreb158tvpnkcta.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.elBarbero.barberia",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "452285580487-d8upnngubuhlm9jhn7k4rqdtpsf4h15s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApBr1uwdtuXuZZGY5Oj6ISvX6MWWpEfiQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "452285580487-d8upnngubuhlm9jhn7k4rqdtpsf4h15s.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "452285580487-sd3qfgp861hg8f8e1s42gnveue99hjle.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.elBarbero.barberia"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
