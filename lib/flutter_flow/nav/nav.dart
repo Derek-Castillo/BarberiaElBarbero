@@ -105,9 +105,39 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => BarberoWidget(),
         ),
         FFRoute(
-          name: AgendaWidget.routeName,
-          path: AgendaWidget.routePath,
-          builder: (context, params) => AgendaWidget(),
+          name: PromocionesWidget.routeName,
+          path: PromocionesWidget.routePath,
+          builder: (context, params) => PromocionesWidget(),
+        ),
+        FFRoute(
+          name: ReservaCitaWidget.routeName,
+          path: ReservaCitaWidget.routePath,
+          builder: (context, params) => ReservaCitaWidget(),
+        ),
+        FFRoute(
+          name: HistorialCitasWidget.routeName,
+          path: HistorialCitasWidget.routePath,
+          builder: (context, params) => HistorialCitasWidget(),
+        ),
+        FFRoute(
+          name: PagoWidget.routeName,
+          path: PagoWidget.routePath,
+          builder: (context, params) => PagoWidget(),
+        ),
+        FFRoute(
+          name: CuentaWidget.routeName,
+          path: CuentaWidget.routePath,
+          builder: (context, params) => CuentaWidget(),
+        ),
+        FFRoute(
+          name: PagoConfirmadoWidget.routeName,
+          path: PagoConfirmadoWidget.routePath,
+          builder: (context, params) => PagoConfirmadoWidget(),
+        ),
+        FFRoute(
+          name: ListaReportesWidget.routeName,
+          path: ListaReportesWidget.routePath,
+          builder: (context, params) => ListaReportesWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

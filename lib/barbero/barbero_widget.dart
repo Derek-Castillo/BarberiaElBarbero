@@ -1,7 +1,9 @@
 import '/backend/backend.dart';
+import '/components/crear_barbero_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -93,6 +95,62 @@ class _BarberoWidgetState extends State<BarberoWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
+                padding: EdgeInsets.all(10.0),
+                child: FFButtonWidget(
+                  onPressed: () async {
+                    await showModalBottomSheet(
+                      isScrollControlled: true,
+                      backgroundColor: Colors.transparent,
+                      enableDrag: false,
+                      context: context,
+                      builder: (context) {
+                        return GestureDetector(
+                          onTap: () {
+                            FocusScope.of(context).unfocus();
+                            FocusManager.instance.primaryFocus?.unfocus();
+                          },
+                          child: Padding(
+                            padding: MediaQuery.viewInsetsOf(context),
+                            child: Container(
+                              height: MediaQuery.sizeOf(context).height * 0.8,
+                              child: CrearBarberoWidget(),
+                            ),
+                          ),
+                        );
+                      },
+                    ).then((value) => safeSetState(() {}));
+                  },
+                  text: 'Agregar Barbero',
+                  options: FFButtonOptions(
+                    height: 40.0,
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                    iconPadding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                    color: Colors.black,
+                    textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                          font: GoogleFonts.interTight(
+                            fontWeight: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .fontWeight,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .fontStyle,
+                          ),
+                          color: Colors.white,
+                          letterSpacing: 0.0,
+                          fontWeight: FlutterFlowTheme.of(context)
+                              .titleSmall
+                              .fontWeight,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).titleSmall.fontStyle,
+                        ),
+                    elevation: 0.0,
+                    borderRadius: BorderRadius.circular(24.0),
+                  ),
+                ),
+              ),
+              Padding(
                 padding: EdgeInsets.all(5.0),
                 child: StreamBuilder<List<BarberosRecord>>(
                   stream: queryBarberosRecord(),
@@ -130,7 +188,7 @@ class _BarberoWidgetState extends State<BarberoWidget> {
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              context.pushNamed(AgendaWidget.routeName);
+                              context.pushNamed(ReservaCitaWidget.routeName);
                             },
                             child: Container(
                               width: 492.01,
